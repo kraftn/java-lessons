@@ -1,7 +1,5 @@
 mkdir out
 javac -d .\out .\src\ru\kraftn\summator\Sum.java
-cd .\out\ru\kraftn\summator
-jar cf libSum.jar .\Sum.class
-cd ..\..\..\..
-javac -cp .\out\ru\kraftn\summator\libSum.jar -d .\out .\src\ru\kraftn\appsummator\AppUsingLibrary.java
-java -cp .\out ru.kraftn.appsummator.AppUsingLibrary %*
+jar cf .\out\ru\kraftn\summator\libSum.jar -C .\out .\ru\kraftn\summator\Sum.class
+javac -d .\out -cp .\out\ru\kraftn\summator\libSum.jar .\src\ru\kraftn\appsummator\AppUsingLibrary.java
+java -cp .\out;.\out\ru\kraftn\summator\libSum.jar ru.kraftn.appsummator.AppUsingLibrary %*
