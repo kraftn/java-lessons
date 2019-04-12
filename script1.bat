@@ -1,3 +1,3 @@
-mkdir out
-javac -d .\out  .\src\ru\kraftn\addition\App.java
-java -cp .\out ru.kraftn.addition.App %*
+mkdir out\app
+javac -d .\out\app  .\src\ru\kraftn\addition\App.java
+java -cp .\out\app ru.kraftn.addition.App %*
